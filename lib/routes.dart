@@ -11,10 +11,12 @@ class RoutesGenerator {
         return MaterialPageRoute(builder: (_) => LoginScreen());
         break;
       case "/main-screen":
-        return MaterialPageRoute(
-            builder: (_) => MainScreen(
-                  resource: args['resource'],
-                ));
+        return PageRouteBuilder(
+            pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+          return MainScreen(
+            resource: args['resource'],
+          );
+        });
         break;
       default:
         return _error();

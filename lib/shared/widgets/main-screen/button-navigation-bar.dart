@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/shared/colors.dart';
 
-class IconBottomNavigationBar extends StatefulWidget {
+class ButtonNavigationBar extends StatefulWidget {
   final IconData icon;
   final String label;
   final String selected;
 
-  const IconBottomNavigationBar({this.icon, this.label, this.selected});
+  const ButtonNavigationBar({this.icon, this.label, this.selected});
 
   @override
-  _IconBottomNavigationBarState createState() => _IconBottomNavigationBarState();
+  _ButtonNavigationBarState createState() => _ButtonNavigationBarState();
 }
 
-class _IconBottomNavigationBarState extends State<IconBottomNavigationBar> {
+class _ButtonNavigationBarState extends State<ButtonNavigationBar> {
   bool pressed = false;
 
   @override
@@ -27,6 +27,9 @@ class _IconBottomNavigationBarState extends State<IconBottomNavigationBar> {
         setState(() {
           pressed = false;
         });
+        if (widget.label != widget.selected) {
+          Navigator.pushNamed(context, "/main-screen", arguments: {"resource": widget.label});
+        }
       },
       child: AnimatedContainer(
         duration: Duration(milliseconds: 50),
@@ -46,8 +49,8 @@ class _IconBottomNavigationBarState extends State<IconBottomNavigationBar> {
         ),
         transform: (pressed
             ? (Matrix4.identity()
-              ..translate(0.9, 0.9)
-              ..scale(0.9, 0.9))
+              ..translate(0.95, 0.95)
+              ..scale(0.95, 0.95))
             : Matrix4.identity()),
       ),
     );
