@@ -40,7 +40,13 @@ class WelcomeScreen extends StatelessWidget {
                   shrinkWrap: true,
                   crossAxisCount: 2,
                   childAspectRatio: (2.7),
-                  children: List.generate(playlists.length, (index) => _constructPlaylistCard(index)),
+                  children: List.generate(
+                      playlists.length,
+                      (index) => GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("/playlist", arguments: {"idPlaylist": index});
+                          },
+                          child: _constructPlaylistCard(index))),
                 ),
                 Container(
                   height: 20,

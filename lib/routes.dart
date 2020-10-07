@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/screens/login-screen.dart';
 import 'package:spotify_clone/screens/main-screen.dart';
+import 'package:spotify_clone/screens/playlist-screen.dart';
 
 class RoutesGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -18,6 +19,13 @@ class RoutesGenerator {
           );
         });
         break;
+      case "/playlist":
+        return PageRouteBuilder(
+            pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+          return PlaylistScreen(
+            idPlaylist: args['idPlaylist'],
+          );
+        });
       default:
         return _error();
     }
