@@ -28,15 +28,26 @@ List<Track> musics = [
 ];
 
 List<Playlist> playlists = [
-  Playlist(1, "Músicas do David Guetta", [1, 2, 3, 4],
-      "https://linkstorage.linkfire.com/medialinks/images/2c99bb56-7308-418a-b83b-77e87a19e841/artwork-440x440.jpg"),
-  Playlist(2, "Musicas Favoritas", [1, 6, 9, 13],
-      "https://studiosol-a.akamaihd.net/tb/letras-blog/wp-content/uploads/2019/10/d582d79-musicas_de_desenhos_dos_anos_80_1390x780-300x168.jpg"),
   Playlist(
-      3, "Músicas do Supercombo", [5, 6, 7, 8], "https://i.scdn.co/image/ab67706f00000003cb7513b2a093f68cd8d13428"),
+      1,
+      "Músicas do David Guetta",
+      [1, 2, 3, 4],
+      "https://linkstorage.linkfire.com/medialinks/images/2c99bb56-7308-418a-b83b-77e87a19e841/artwork-440x440.jpg",
+      false,
+      "Anzell"),
+  Playlist(
+      2,
+      "Musicas Favoritas",
+      [1, 6, 9, 13],
+      "https://studiosol-a.akamaihd.net/tb/letras-blog/wp-content/uploads/2019/10/d582d79-musicas_de_desenhos_dos_anos_80_1390x780-300x168.jpg",
+      false,
+      "You"),
+  Playlist(3, "Músicas do Supercombo", [5, 6, 7, 8], "https://i.scdn.co/image/ab67706f00000003cb7513b2a093f68cd8d13428",
+      false, "Carator"),
   Playlist(4, "Músicas do The White Buffalo", [9, 10, 11, 12, 13],
-      "https://exclaim.ca/images/white-buffalo-widows-walk.jpg"),
+      "https://exclaim.ca/images/white-buffalo-widows-walk.jpg", false, "spotify"),
   Playlist(5, "Todas as músicas", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-      "https://m.epochtimes.com.br/assets/uploads/2014/08/ct-musica-favorita-900-795x447.jpg"),
-  Playlist(6, "Playlist com uma música", [12], "https://cobizz.com.br/wp-content/uploads/2019/01/musicaok-780x405.jpg")
+      "https://m.epochtimes.com.br/assets/uploads/2014/08/ct-musica-favorita-900-795x447.jpg", false, "you"),
+  Playlist(6, "Playlist com uma música", [12], "https://cobizz.com.br/wp-content/uploads/2019/01/musicaok-780x405.jpg",
+      false, "spotify")
 ];
