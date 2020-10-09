@@ -67,7 +67,11 @@ class WelcomeScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       shrinkWrap: true,
                       itemCount: playlists.length,
-                      itemBuilder: (context, index) => _constructRecentlyPlayedCardPlaylist(index)),
+                      itemBuilder: (context, index) => GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("/playlist", arguments: {"idPlaylist": index});
+                          },
+                          child: _constructRecentlyPlayedCardPlaylist(index))),
                 ),
                 Container(
                   height: 20,
@@ -87,7 +91,11 @@ class WelcomeScreen extends StatelessWidget {
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: artists.length,
-                    itemBuilder: (context, index) => _constructFavoriteArtistCard(index),
+                    itemBuilder: (context, index) => GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).pushNamed("/artist", arguments: {"idArtist": index});
+                        },
+                        child: _constructFavoriteArtistCard(index)),
                   ),
                 )
               ],

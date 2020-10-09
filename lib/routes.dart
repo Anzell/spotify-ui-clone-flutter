@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/screens/artist-screen.dart';
 import 'package:spotify_clone/screens/login-screen.dart';
 import 'package:spotify_clone/screens/main-screen.dart';
 import 'package:spotify_clone/screens/playlist-screen.dart';
@@ -26,6 +27,14 @@ class RoutesGenerator {
             idPlaylist: args['idPlaylist'],
           );
         });
+        break;
+      case "/artist":
+        return PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => ArtistScreen(
+            idArtist: args['idArtist'],
+          ),
+        );
+        break;
       default:
         return _error();
     }
