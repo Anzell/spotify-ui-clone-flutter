@@ -3,6 +3,7 @@ import 'package:spotify_clone/screens/artist-screen.dart';
 import 'package:spotify_clone/screens/login-screen.dart';
 import 'package:spotify_clone/screens/main-screen.dart';
 import 'package:spotify_clone/screens/playlist-screen.dart';
+import 'package:spotify_clone/screens/search-music-screen.dart';
 
 class RoutesGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -33,6 +34,11 @@ class RoutesGenerator {
           pageBuilder: (context, animation, secondaryAnimation) => ArtistScreen(
             idArtist: args['idArtist'],
           ),
+        );
+        break;
+      case "/search-screen":
+        return PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) => SearchMusicScreen(),
         );
         break;
       default:
